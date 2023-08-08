@@ -1,0 +1,6 @@
+# tạo rule để block https://github.com/twseptian/php-8.1.0-dev-user-agentt-backdoor-docker-lab/tree/main/pictures
+# backdoor duoc tao san, khi nguoi dung query cac value vao trong thi se thuc thi
+# curl -H "User-Agentt: zerodiumsystem('id');" 'http://52.163.96.252:8088/'
+#rule waas
+req.headers["User-Agentt"] contains /zerodiumsystem\('.*'\)/ or req.header_values contains "zerodiumsystem" or req.body contains "zerodiumsystem" 
+>> test va da chan duoc
